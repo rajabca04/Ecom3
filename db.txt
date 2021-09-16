@@ -1,0 +1,31 @@
+User
+1. isAdmin - boolean
+2. caregory
+	 id, cat_title, description, parent_id
+3. product
+	id,title,category_id, price , descount_price(nullable),description(descr),brand,img1,img2(nullable)
+4. Adress
+	id, name(nullable),contact, area, user_id(fk),street, city, state, pincode, type,(office,home)
+5.coupon
+	id , code, amount,status
+6. size
+	id , size , status
+7. order
+	id, user_id, ordered, address_id(nullable),coupon(nullable)
+8. OrderItem
+	id,user_id,product_id,order_id,ordered,qty
+
+    step 2
+        create model & controller extra home/admin controller
+
+
+
+
+Verb	URI	Action	Route Name
+GET	/photos	index	photos.index
+GET	/photos/create	create	photos.create
+POST	/photos	store	photos.store
+GET	/photos/{photo}	show	photos.show
+GET	/photos/{photo}/edit	edit	photos.edit
+PUT/PATCH	/photos/{photo}	update	photos.update
+DELETE	/photos/{photo}	destroy	photos.destroy
